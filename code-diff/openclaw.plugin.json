@@ -1,0 +1,52 @@
+{
+  "id": "code-diff",
+  "name": "Code Diff",
+  "description": "代码版本对比工具，对比两个文件或两个版本的代码差异，输出带行号的 diff",
+  "capabilities": {
+    "actions": [
+      "compare_two_files",
+      "diff_with_encoding_auto_detect"
+    ],
+    "input_types": [
+      "file_path_1",
+      "file_path_2",
+      "context_lines"
+    ],
+    "output_types": [
+      "colored_diff",
+      "unified_diff",
+      "stat_only"
+    ],
+    "scenarios": [
+      "代码变更审查",
+      "版本回滚确认",
+      "合并冲突分析"
+    ],
+    "chainable": {
+      "output_type": "text",
+      "can_chain_from": [
+        "code-reader"
+      ],
+      "can_chain_to": [
+        "exec-python"
+      ]
+    },
+    "constraints": {
+      "supports_utf8": true,
+      "supports_gbk": true,
+      "supports_large_files": true
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "main": "dist/index.js",
+  "kind": "tool",
+  "contracts": {
+    "tools": [
+      "code_diff"
+    ]
+  }
+}

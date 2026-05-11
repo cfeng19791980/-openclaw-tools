@@ -1,0 +1,26 @@
+{
+  "name": "@openclaw/code-diff",
+  "version": "1.0.0",
+  "description": "Code diff tool for OpenClaw - 对比两个文件或两个版本的代码差异，输出带行号的 diff",
+  "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "index.ts",
+    "openclaw.plugin.json"
+  ],
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ]
+  },
+  "keywords": [
+    "openclaw",
+    "code-diff",
+    "diff",
+    "compare"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "iconv-lite": "^0.7.2"
+  }
+}

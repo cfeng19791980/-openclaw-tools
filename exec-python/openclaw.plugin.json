@@ -1,0 +1,60 @@
+{
+  "id": "exec-python",
+  "name": "Exec Python",
+  "description": "Python 代码执行工具，直接执行 Python 代码字符串并返回结果",
+  "capabilities": {
+    "actions": [
+      "run_python_code",
+      "run_with_timeout",
+      "run_in_workdir"
+    ],
+    "input_types": [
+      "python_code_string",
+      "timeout_seconds",
+      "working_directory"
+    ],
+    "output_types": [
+      "stdout",
+      "stderr",
+      "execution_result"
+    ],
+    "scenarios": [
+      "临时计算",
+      "数据清洗",
+      "文件分析",
+      "编码转换验证",
+      "原型验证",
+      "自动化脚本"
+    ],
+    "chainable": {
+      "output_type": "text",
+      "can_chain_from": [
+        "code-reader",
+        "code-diff",
+        "memory-search-better"
+      ],
+      "can_chain_to": [
+        "file-patch"
+      ]
+    },
+    "constraints": {
+      "max_timeout": 30,
+      "supports_utf8": true,
+      "supports_gbk": true,
+      "no_network_access": true,
+      "no_install_packages": true
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "main": "dist/index.js",
+  "kind": "tool",
+  "contracts": {
+    "tools": [
+      "exec_python"
+    ]
+  }
+}

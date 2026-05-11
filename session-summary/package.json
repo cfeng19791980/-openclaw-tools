@@ -1,0 +1,25 @@
+{
+  "name": "@openclaw/session-summary",
+  "version": "1.0.0",
+  "description": "Session summary tool for OpenClaw - 提取会话的关键信息和决策点",
+  "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "index.ts",
+    "openclaw.plugin.json"
+  ],
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ]
+  },
+  "keywords": [
+    "openclaw",
+    "session-summary",
+    "summary"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.6.0"
+  }
+}

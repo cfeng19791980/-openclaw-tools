@@ -1,0 +1,58 @@
+{
+  "id": "file-patch",
+  "name": "File Patch",
+  "description": "按行号修补文件工具，解决大文件精确上下文匹配困难的问题",
+  "capabilities": {
+    "actions": [
+      "replace_by_line_numbers",
+      "multiple_patches",
+      "dry_run_preview",
+      "auto_backup"
+    ],
+    "input_types": [
+      "file_path",
+      "start_line",
+      "end_line",
+      "new_content"
+    ],
+    "output_types": [
+      "patch_result",
+      "diff_preview",
+      "backup_path"
+    ],
+    "scenarios": [
+      "代码修改",
+      "配置文件更新",
+      "大文件精确编辑",
+      "批量替换"
+    ],
+    "chainable": {
+      "output_type": "text",
+      "can_chain_from": [
+        "code-reader",
+        "exec-python"
+      ],
+      "can_chain_to": [
+        "code-diff"
+      ]
+    },
+    "constraints": {
+      "supports_utf8": true,
+      "supports_gbk": true,
+      "auto_backup": true,
+      "preview_before_apply": true
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "main": "dist/index.js",
+  "kind": "tool",
+  "contracts": {
+    "tools": [
+      "file_patch"
+    ]
+  }
+}

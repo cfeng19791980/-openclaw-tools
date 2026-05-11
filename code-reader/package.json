@@ -1,0 +1,25 @@
+{
+  "name": "@openclaw/code-reader",
+  "version": "1.0.0",
+  "description": "Code file reader for OpenClaw - 支持行号、编码检测、多文件和通配符匹配",
+  "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "index.ts",
+    "openclaw.plugin.json"
+  ],
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ]
+  },
+  "keywords": [
+    "openclaw",
+    "code-reader",
+    "file-reader"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "iconv-lite": "^0.7.2"
+  }
+}

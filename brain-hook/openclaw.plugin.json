@@ -1,0 +1,14 @@
+{
+  "id": "brain-hook",
+  "activation": {
+    "onStartup": true
+  },
+  "name": "Brain Hook",
+  "description": "在 before_prompt_build 阶段拦截用户指令，调用 Brain Entry 获取意图类型并注入 system message",
+  "main": "index.js",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}

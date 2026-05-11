@@ -1,0 +1,11 @@
+{
+  "name": "@openclaw/brain-hook",
+  "version": "11.0.0",
+  "description": "Brain Hook - intercept user instructions, call Brain Entry, inject standardized commands",
+  "openclaw": {
+    "hooks": [
+      "./HOOK.md"
+    ]
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "code-reader",
+  "name": "Code Reader",
+  "description": "代码文件全量读取工具，支持行号、编码检测、多文件和通配符匹配",
+  "capabilities": {
+    "actions": [
+      "read_file",
+      "glob_search",
+      "encoding_detect",
+      "read_with_line_numbers"
+    ],
+    "input_types": [
+      "file_path",
+      "glob_pattern",
+      "line_range"
+    ],
+    "output_types": [
+      "file_content",
+      "lines_with_numbers"
+    ],
+    "scenarios": [
+      "代码审查",
+      "文件读取",
+      "批量搜索",
+      "大文件一次性读取"
+    ],
+    "chainable": {
+      "output_type": "text",
+      "can_chain_to": [
+        "code-diff",
+        "exec-python",
+        "session-summary"
+      ]
+    },
+    "constraints": {
+      "max_chars_per_call": 100000,
+      "supports_utf8": true,
+      "supports_gbk": true
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "main": "dist/index.js",
+  "kind": "tool",
+  "contracts": {
+    "tools": [
+      "code_read"
+    ]
+  }
+}

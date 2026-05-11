@@ -1,0 +1,58 @@
+{
+  "id": "memory-search-better",
+  "name": "Memory Search Better",
+  "description": "增强记忆搜索工具，直接全文搜索 memory/ 和 wiki/ 目录下的 .md 文件",
+  "capabilities": {
+    "actions": [
+      "search_memory_docs",
+      "search_wiki_docs",
+      "search_all_docs",
+      "search_with_min_score"
+    ],
+    "input_types": [
+      "query_keywords",
+      "corpus_scope",
+      "max_results"
+    ],
+    "output_types": [
+      "matched_fragments",
+      "file_names",
+      "line_numbers",
+      "scores"
+    ],
+    "scenarios": [
+      "知识回顾",
+      "历史记录查找",
+      "SOP查询",
+      "决策追溯"
+    ],
+    "chainable": {
+      "output_type": "text",
+      "can_chain_to": [
+        "exec-python",
+        "session-summary"
+      ]
+    },
+    "constraints": {
+      "max_results": 20,
+      "supports_chinese": true,
+      "corpus_options": [
+        "memory",
+        "wiki",
+        "all"
+      ]
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "main": "dist/index.js",
+  "kind": "tool",
+  "contracts": {
+    "tools": [
+      "memory_search_better"
+    ]
+  }
+}

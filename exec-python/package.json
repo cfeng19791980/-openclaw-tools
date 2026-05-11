@@ -1,0 +1,26 @@
+{
+  "name": "@openclaw/exec-python",
+  "version": "1.0.0",
+  "description": "Python code executor for OpenClaw - 直接执行 Python 代码字符串并返回结果",
+  "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "index.ts",
+    "openclaw.plugin.json"
+  ],
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ]
+  },
+  "keywords": [
+    "openclaw",
+    "exec-python",
+    "python",
+    "executor"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "iconv-lite": "^0.7.2"
+  }
+}

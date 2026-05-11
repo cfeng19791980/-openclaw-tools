@@ -1,0 +1,23 @@
+{
+  "name": "@openclaw/memory-search-better",
+  "version": "1.0.0",
+  "description": "Enhanced memory search for OpenClaw - 直接全文搜索 memory/ 和 wiki/ 目录",
+  "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "index.ts",
+    "openclaw.plugin.json"
+  ],
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ]
+  },
+  "keywords": [
+    "openclaw",
+    "memory-search",
+    "fulltext-search"
+  ],
+  "license": "MIT",
+  "dependencies": {}
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@openclaw/file-patch",
+  "version": "1.0.0",
+  "description": "File patch tool for OpenClaw - 按行号修补文件，解决大文件精确上下文匹配困难的问题",
+  "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "index.ts",
+    "openclaw.plugin.json"
+  ],
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ]
+  },
+  "keywords": [
+    "openclaw",
+    "file-patch",
+    "patch",
+    "file-edit"
+  ],
+  "license": "MIT",
+  "dependencies": {}
+}

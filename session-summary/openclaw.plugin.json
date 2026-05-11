@@ -1,0 +1,63 @@
+{
+  "id": "session-summary",
+  "name": "Session Summary",
+  "description": "会话摘要工具，快速提取会话的关键信息和决策点",
+  "capabilities": {
+    "actions": [
+      "summarize_current_session",
+      "summarize_any_session",
+      "summary",
+      "compact",
+      "full"
+    ],
+    "input_types": [
+      "session_key",
+      "max_messages",
+      "output_format"
+    ],
+    "output_types": [
+      "structured_summary",
+      "problem_list",
+      "file_list",
+      "decision_list",
+      "todo_list"
+    ],
+    "scenarios": [
+      "会话回顾",
+      "进度跟踪",
+      "决策追溯",
+      "工作汇报",
+      "长对话总结"
+    ],
+    "chainable": {
+      "output_type": "text",
+      "can_chain_from": [
+        "memory-search-better"
+      ],
+      "can_chain_to": [
+        "exec-python"
+      ]
+    },
+    "constraints": {
+      "output_formats": [
+        "summary",
+        "compact",
+        "full"
+      ],
+      "supports_multi_session": true,
+      "local_file_read": true
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "main": "dist/index.js",
+  "kind": "tool",
+  "contracts": {
+    "tools": [
+      "session_summary"
+    ]
+  }
+}
